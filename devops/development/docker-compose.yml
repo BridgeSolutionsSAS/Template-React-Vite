@@ -1,0 +1,13 @@
+services:
+  vite-docker:
+    build:
+      context: ../..
+      dockerfile: devops/development/Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../..:/app
+      - /app/node_modules
+    env_file:
+      - ../../.env
+    command: npm run dev -- --host

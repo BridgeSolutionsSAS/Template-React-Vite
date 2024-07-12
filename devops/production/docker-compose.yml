@@ -1,0 +1,9 @@
+services:
+  vite-docker:
+    build:
+      context: ../..
+      dockerfile: devops/production/Dockerfile
+    ports:
+      - "80:80"
+    env_file:
+      - ../../.env
