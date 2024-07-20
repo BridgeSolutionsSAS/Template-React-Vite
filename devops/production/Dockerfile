@@ -1,5 +1,5 @@
 # Usar una imagen base con Node.js
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
